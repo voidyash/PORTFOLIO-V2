@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YASH BARNWAL - PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">VOIDYASH • SYSTEM INIT</div>
+            <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+            <div class="loader-text" id="loaderText">LOADING PERSONALITY MODULES...</div>
+            <div class="loader-pct" id="loaderPct">0%</div>
+        </div>
+    </div>
+
+    <div id="cursor"></div>
+    <div id="cursor-trail"></div>
+
+    <nav id="nav">
+        <div class="nav-logo">
+            <span class="nav-bracket">[</span>
+            <span class="nav-name">YASH BARNWAL</span>
+            <span class="nav-bracket">]</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#timeline">JOURNEY</a></li>
+            <li><a href="#lab">LAB</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="nav-controls">
+            <!-- <button id="soundToggle" class="nav-btn" title="Toggle Sound">📻</button> -->
+            <div class="nav-status"><span class="dot"></span>ONLINE</div>
+        </div>
+        <button class="nav-hamburger" id="hamburger">&#9776</button> 
+    </nav>
+
+    <section id="hero">
+        <canvas id="heroCanvas"></canvas>
+
+        <div class="hero-hud hud-tl">
+            <span>SYSTEM•STATUS</span><span class="hud-val green">ACTIVE</span>
+        </div>
+        <div class="hero-hud hud-tr">
+            <span>CORE•TEMP</span><span class="hud-val orange" id="hudTemp">36.6°C</span>
+        </div>
+        <div class="hero-hud hud-bl">
+            <span>NET•PING</span><span class="hud-val green" id="hudPing">4ms</span>
+        </div>
+        <div class="hero-hud hud-br">
+            <span>BUILD</span><span class="hud val cyan">v.2.5.11</span>
+        </div>
+
+        <div class="hero-content" id="heroContent">
+            <div class="hero-tag">&lt; DEVELOPER / ></div>
+            <h1 class="hero-name" id="heroName">
+                <span class="name-line">YASH</span>
+                <span class="name-line-accent">BARNWAL</span>
+            </h1>
+
+            <div class="hero-titles">
+                <span class="title-prefix">I AM A </span>
+                <span class="hero-rotating-title" id="rotatingTitle">PROGRAMMER</span>
+            </div>
+            <p class="hero-intro">
+                I build systems that think, games that breathe, and tools that shouldn't exist yet.
+                Somewhere between a debugger's precision and a hacker's curiosity. THIS IS MY LAB.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span class="btn-glitch">VIEW PROJECTS</span>
+                    <span class="btn-icon">↣</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>CONTACT ME</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="h-stat"><span class="h-num" data-target="38">0</span><span class="h-label">PROJECTS</span></div>
+                <div class="h-stat"><span class="h-num" data-target="12">0</span><span class="h-label">TECHNOLOGIES</span></div>
+                <div class="h-stat"><span class="h-num" data-target="4956">0</span><span class="h-label">HOURS CODED</span></div>
+                <div class="h-stat"><span class="h-num" data-target="4">0</span><span class="h-label">GAMES BUILT</span></div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="section-header">
+            <div class="section-tag">// 01</div>
+            <div class="section-title">ABOUT <span class="accent">ME</span></div>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card glass" data-reveal>
+                <div class="card-icon">👷‍♂️</div>
+                <h3>THE BUILDER</h3>
+                <p>I don't just follow tutorials - I reverse engineer them. Every project is an experiment where I push beyong the instructions to understand <em>WHY</em> something works, then break it to learn how to fix it.</p>
+            </div>
+            <div class="about-card glass" data-reveal>
+                <div class="card-icon">🌐</div>
+                <h3>THE EXPLORER</h3>
+                <p>From Unity game mechanics to Ollama-powered AI agents - my workspace spans multiple IDEs, operating systems, and entirelty different paradigms. VS Code, PyCharm, JetBrains Rider, and Unreal Editor are all open at once.</p>
+            </div>
+            <div class="about-card glass" data-reveal>
+                <div class="card-icon">🎮</div>
+                <h3>THE CREATOR</h3>
+                <p>Game development has taught me that real-time systems demand both artistry and brutal optimization. I've shipped prototypes in Godot, Unity and Unreal Engine each teaching me something that the last one couldn't.</p>
+            </div>
+            <div class="about-card glass" data-reveal>
+                <div class="card-icon">📡</div>
+                <h3>THE DIRECTOR</h3>
+                <p>Broadcasting and technical direction in esports gave me a production mindset: reliability undre pressure, real-time decision making, and systems that must not fail. That mentality also lives in every line of code I write.</p>
+            </div>
+        </div>
+
+        <div class="about-tools" data-reveal>
+            <div class="tools-label">// MY TOOLKIT</div>
+            <div class="tools-list">
+                <span class="tool-pill">VS Code</span>
+                <span class="tool-pill">JetBrains Rider</span>
+                <span class="tool-pill">PyCharm</span>
+                <span class="tool-pill">Unity</span>
+                <span class="tool-pill">Unreal Engine</span>
+                <span class="tool-pill">Godot</span>
+                <span class="tool-pill">Git</span>
+                <span class="tool-pill">Ollama</span>
+                <span class="tool-pill">Node.js</span>
+                <span class="tool-pill">OBS Studio</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header">
+            <div class="section-tag">// 02</div>
+            <h2 class="section-title">SKILL <span class="accent">MATRIX</span></h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="skills-categories">
+            <button class="skill-cat-btn active" data-cat="all">ALL</button>
+            <button class="skill-cat-btn" data-cat="programming">PROGRAMMING</button>
+            <button class="skill-cat-btn" data-cat="ai">AI &amp; LLMs</button>
+            <button class="skill-cat-btn" data-cat="gamedev">GAME DEV</button>
+            <button class="skill-cat-btn" data-cat="frontend">FRONTEND</button>
+            <button class="skill-cat-btn" data-cat="backend">BACKEND</button>
+            <button class="skill-cat-btn" data-cat="production">ESPORTS PRODUCTION</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid"> 
+            <!-- Inserted using JS -->
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-header">
+            <div class="section-tag">// 03</div>
+            <h2 class="section-title">PROJECT <span class="accent">ARCHIVE</span></h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Inserted using JS -->
+        </div>
+    </section>
+
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-box glass">
+            <button class="modal-close" id="modalClose">Ⅹ</button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <section id="timeline">
+        <div class="section-header">
+            <div class="section-tag">// 04</div>
+            <h2 class="section-title">DEV <span class="accent">JOURNEY</span></h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="timeline-wrap" id="timelineWrap">
+            <!-- Inserted by JS -->
+        </div>
+    </section>
+
+    <section id="lab">
+        <div class="section-header">
+            <div class="section-tag">// 05</div>
+            <h2 class="section-title">THE <span class="accent">LAB</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <p class="section-sub">Drag to rotate. Scroll to zoom. Explore.</p>
+        <canvas id="labCanvas"></canvas>
+        <div class="lab-overlay">
+            <div class="lab-info">
+                <div class="lab-tag">NEURAL CORE V1.0</div>
+                <div class="lab-desc">Experimental AI architecture visualization. Real-time mesh deformation via mouse input.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <div class="section-tag">// 06</div>
+            <h2 class="section-title">OPEN <span class="accent">CHANNEL</span></h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="content-wrap">
+            <div class="contact-terminal glass" data-reveal>
+                <div class="terminal-bar">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot yellow"></span>
+                    <span class="t-dot green"></span>
+                    <span class="t-title">contact.sh</span>
+                </div>
+
+                <div class="terminal-body">
+                    <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">WhoAmI</span></div>
+                    <div class="t-line t-output">// A developer ready to colaborate, build, and ship.</div>
+                    <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd">send --message</span></div>
+
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="cName" placeholder=" " autocomplete="off" />
+                            <label for="cName">YOUR_NAME</label>
+                            <div class="form-line"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="cEmail" placeholder=" " autocomplete="off" />
+                            <label for="cEmail">YOUR_EMAIL</label>
+                            <div class="form_line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="cMsg" rows="4" placeholder=" "></textarea>
+                            <label for="cMsg">MESSAGE</label>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <button class="btn btn-primary" id="sendBtn">
+                            <span>TRANSMIT</span>
+                            <span class="btn-icon">↣</span>
+                        </button>
+
+                        <div class="send-status" id="sendStatus"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-links" data-reveal>
+
+                <!-- GITHUB -->
+                <div class="contact-link-item">
+                  <div class="cli-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 .5C5.648.5.5 5.648.5 12a11.5 11.5 0 0 0 7.863 10.924c.575.106.787-.25.787-.556 0-.275-.012-1.187-.018-2.15-3.2.694-3.877-1.356-3.877-1.356-.525-1.337-1.282-1.693-1.282-1.693-1.05-.718.08-.704.08-.704 1.162.082 1.774 1.193 1.774 1.193 1.032 1.768 2.707 1.257 3.368.96.106-.748.406-1.257.738-1.546-2.556-.287-5.244-1.278-5.244-5.69 0-1.257.45-2.287 1.187-3.093-.118-.288-.512-1.444.112-3.012 0 0 .968-.31 3.174 1.182a10.95 10.95 0 0 1 5.78 0c2.206-1.492 3.173-1.182 3.173-1.182.625 1.568.231 2.724.113 3.012.738.806 1.186 1.836 1.186 3.093 0 4.424-2.693 5.4-5.256 5.681.418.362.787 1.075.787 2.168 0 1.568-.012 2.831-.012 3.218 0 .306.206.668.793.555A11.502 11.502 0 0 0 23.5 12C23.5 5.648 18.352.5 12 .5Z"/>
+                    </svg>
+                  </div>
+              
+                  <div class="cli-info">
+                    <div class="cli-platform">GITHUB</div>
+                    <a href="https://github.com/voidyash" target="_blank" class="cli-handle">
+                      github.com/voidyash
+                    </a>
+                  </div>
+                </div>
+              
+                <!-- DISCORD -->
+                <div class="contact-link-item">
+                  <div class="cli-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.317 4.369A19.791 19.791 0 0 0 15.885 3c-.191.347-.404.813-.553 1.178a18.27 18.27 0 0 0-5.364 0 12.64 12.64 0 0 0-.56-1.178 19.736 19.736 0 0 0-4.438 1.369C2.163 8.582 1.397 12.69 1.78 16.742a19.9 19.9 0 0 0 5.993 3.03c.484-.666.915-1.37 1.287-2.11-.708-.268-1.382-.604-2.02-.993.17-.124.336-.254.496-.389 3.89 1.78 8.11 1.78 11.954 0 .16.135.326.265.496.389-.638.389-1.319.725-2.026.993.372.74.803 1.444 1.287 2.11a19.86 19.86 0 0 0 6-3.03c.451-4.695-.766-8.766-3.93-12.373ZM9.955 14.604c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.213 0 2.169 1.095 2.157 2.418 0 1.334-.955 2.419-2.157 2.419Zm4.09 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.418 2.157-2.418 1.213 0 2.169 1.095 2.157 2.418 0 1.334-.944 2.419-2.157 2.419Z"/>
+                    </svg>
+                  </div>
+              
+                  <div class="cli-info">
+                    <div class="cli-platform">DISCORD</div>
+                    <span class="cli-handle">voidyyash</span>
+                  </div>
+                </div>
+              
+                <!-- EMAIL -->
+                <div class="contact-link-item">
+                  <div class="cli-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 7L2 6.5V18h20V6.5L12 11Zm0-2 10-4.5H2L12 9Z"/>
+                    </svg>
+                  </div>
+              
+                  <div class="cli-info">
+                    <div class="cli-platform">EMAIL</div>
+                    <a href="mailto:yashbarnwalx@gmail.com" class="cli-handle">
+                      yashbarnwalx@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-grid-line"></div>
+        <div class="footer-inner">
+            <div class="footer-logo">[YASH BARNWAL]</div>
+            <div class="footer-quote">"Build it. Break it. Understand it. Build it better."</div>
+            <div class="footer-copy">© 2026 // All systems nominal. All rights reserved.</div>
+        </div>
+        <div class="footer-grid-line"></div>
+    </footer>
+
+    <div id="easterEgg" class="easter-egg hidden">
+        <div class="egg-content glass">
+            <div class="egg-title">// KONAMI UNLOCKED</div>
+            <div class="egg-msg">You found the lab's hidden sector. <br>Achievement: <span class="accent">HACKER MINDSET</span> unlocked.</div>
+            <button class="btn btn-secondary egg-close" id="eggClose">CLOSE</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
