@@ -322,15 +322,86 @@
             <div class="footer-logo">[YASH BARNWAL]</div>
             <div class="footer-quote">"Build it. Break it. Understand it. Build it better."</div>
             <div class="footer-copy">© 2026 // All systems nominal. All rights reserved.</div>
+            <div class="footer-copy">PRO TIP: Try the KONAMI code. </div>
         </div>
         <div class="footer-grid-line"></div>
     </footer>
 
     <div id="easterEgg" class="easter-egg hidden">
+        <canvas id="eggCanvas"></canvas>
         <div class="egg-content glass">
-            <div class="egg-title">// KONAMI UNLOCKED</div>
-            <div class="egg-msg">You found the lab's hidden sector. <br>Achievement: <span class="accent">HACKER MINDSET</span> unlocked.</div>
-            <button class="btn btn-secondary egg-close" id="eggClose">CLOSE</button>
+            <div class="egg-scan-line"></div>
+            <div class="egg-corner tl"></div>
+            <div class="egg-corner tr"></div>
+            <div class="egg-corner bl"></div>
+            <div class="egg-corner br"></div>
+        
+            <div class="egg-badge-wrap">
+                <div class="egg-badge">
+                    <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" width="96" height="96">
+                        <defs>
+                          <filter id="gf">
+                            <feGaussianBlur stdDeviation="3" result="b"/>
+                            <feComposite in="SourceGraphic" in2="b" operator="over"/>
+                          </filter>
+                        </defs>
+                      
+                        <!-- Outer glow ring (pulsing) -->
+                        <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(0,210,255,0.15)" stroke-width="1" class="badge-pulse"/>
+                        <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(0,210,255,0.4)" stroke-width="1" filter="url(#gf)" class="badge-pulse"/>
+                      
+                        <!-- Orbiting dots (spinning) -->
+                        <g class="badge-ring">
+                          <circle cx="48" cy="6"  r="3" fill="#00D2FF" opacity="0.9"/>
+                          <circle cx="48" cy="90" r="3" fill="#00D2FF" opacity="0.9"/>
+                          <circle cx="6"  cy="48" r="2" fill="#00FFCC" opacity="0.6"/>
+                          <circle cx="90" cy="48" r="2" fill="#00FFCC" opacity="0.6"/>
+                          <circle cx="18" cy="18" r="2" fill="#00D2FF" opacity="0.5"/>
+                          <circle cx="78" cy="78" r="2" fill="#00D2FF" opacity="0.5"/>
+                          <circle cx="78" cy="18" r="2" fill="#00FFCC" opacity="0.4"/>
+                          <circle cx="18" cy="78" r="2" fill="#00FFCC" opacity="0.4"/>
+                        </g>
+                      
+                        <!-- Star outer (glowing fill) -->
+                        <polygon
+                          points="48,18 54,38 74,38 58,50 64,70 48,58 32,70 38,50 22,38 42,38"
+                          fill="#00D2FF" opacity="0.9" filter="url(#gf)"/>
+                      
+                        <!-- Star cutout (dark core) -->
+                        <polygon
+                          points="48,22 53,39 70,39 57,49 62,66 48,56 34,66 39,49 26,39 43,39"
+                          fill="#001830"/>
+                      
+                        <!-- Star inner (solid fill) -->
+                        <polygon
+                          points="48,26 52,39 65,39 55,47 59,60 48,52 37,60 41,47 31,39 44,39"
+                          fill="#00D2FF" opacity="0.7"/>
+                      
+                        <!-- Center symbol -->
+                        <text x="48" y="52" text-anchor="middle"
+                              font-size="13" font-family="Orbitron, monospace"
+                              font-weight="900" fill="#001830">★</text>
+                      </svg>
+                </div>
+            </div>
+
+            <div class="egg-unlock-label">ACHIEVEMENT UNLOCKED</div>
+            <div class="egg-title">KONAMI OVERRIDE</div>
+            <div class="egg-subtitle">SECRET SECTOR ACCESSED // CLEARANCE: LEVEL 99</div>
+            <div class="egg-divider"></div>
+            <div class="egg-achievement">HACKER MINDSET</div>
+
+            <p class="egg-msg">CONGRATS! You accessed my <span class="accent">secret lab.</span><br>
+                Most visitors just see the top layer. <br>
+                <span class="egg-dim">↑↑↓↓←→←→BA — sequence recognized.</span>
+            </p>
+
+            <div class="egg-stats">
+                <div class="egg-stat"><span class="egg-num" id="eggCount">0</span><span class="egg-label">KNOWN BY</span></div>
+                <div class="egg-stat"><span class="egg-num">1</span><span class="egg-label">YOU</span></div>
+                <div class="egg-stat"><span class="egg-num">∞</span><span class="egg-label">RESPECT</span></div>
+            </div>
+            <button class="btn btn-secondary egg-close" id="eggClose">CLOSE SECTOR</button>
         </div>
     </div>
 
