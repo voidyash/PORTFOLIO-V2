@@ -1,4 +1,4 @@
-# ⚡ VOIDAI Portfolio
+#  VOIDAI Portfolio
 
 A futuristic cyberpunk-inspired developer portfolio built with pure HTML, CSS, and JavaScript.
 
@@ -18,16 +18,16 @@ The goal was to make the portfolio feel less like a webpage and more like an ope
 
 ---
 
-# 🚀 Features
+#  Features
 
-## 🌌 3D Hero Scene
+##  3D Hero Scene
 - Three.js powered wireframe geometry
 - animated cyber-grid floor
 - glowing particles
 - realtime rendering
 - responsive canvas system
 
-## 🧠 Dynamic Project Archive
+##  Dynamic Project Archive
 Projects rendered directly from JavaScript objects.
 
 Easy scalability:
