@@ -371,25 +371,15 @@ const TIMELINE = [{
 (function initCursor() {
     const cursor = document.getElementById("cursor");
     const trail = document.getElementById("cursor-trail");
-    let mx = 0,
-        my = 0,
-        tx = 0,
-        ty = 0;
     document.addEventListener("mousemove", (e) => {
-        mx = e.clientX;
-        my = e.clientY;
+        const mx = e.clientX;
+        const my = e.clientY;
         cursor.style.left = mx + "px";
         cursor.style.top = my + "px";
+        
+        trail.style.left = mx + "px";
+        trail.style.top = my + "px";
     });
-
-    function animateTrail() {
-        tx += (mx - tx) * 0.15;
-        ty += (my - ty) * 0.15;
-        trail.style.left = tx + "px";
-        trail.style.top = ty + "px";
-        requestAnimationFrame(animateTrail);
-    }
-    animateTrail();
 })();
 
 (function initNav() {
@@ -621,6 +611,7 @@ function initCounters() {
             card.innerHTML = `
           <div class="skill-icon">${skill.icon}</div>
           <div class="skill-name">${skill.name}</div>
+          <div class="skill-level">${skill.level}%</div>
           <div class="skill-bar-wrap"><div class="skill-bar" data-level="${skill.level}"></div></div>
           <div class="skill-cat-label">${skill.cat.toUpperCase()}</div>
         `;
@@ -1104,35 +1095,6 @@ function initCounters() {
         "a",
     ];
     let seq = [];
-    //   document.addEventListener("keydown", (e) => {
-    //     seq.push(e.key);
-    //     seq = seq.slice(-KONAMI.length);
-    //     if (seq.join("") === KONAMI.join("")) {
-    //       document.getElementById("easterEgg").classList.remove("hidden");
-    //     }
-    //   });
-    //   document.getElementById("eggClose").addEventListener("click", () => {
-    //     document.getElementById("easterEgg").classList.add("hidden");
-    //   });
-    // })();
-
-    // (function initNavActive() {
-    //   const sections = document.querySelectorAll("section[id]");
-    //   const links = document.querySelectorAll(".nav-links a");
-    //   window.addEventListener(
-    //     "scroll",
-    //     () => {
-    //       let current = "";
-    //       sections.forEach((sec) => {
-    //         if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-    //       });
-    //       links.forEach((a) => {
-    //         a.style.color =
-    //           a.getAttribute("href") === "#" + current ? "var(--cyan)" : "";
-    //       });
-    //     },
-    //     { passive: true },
-    //   );
 
     const egg = document.getElementById("easterEgg");
     const content = egg.querySelector('.egg-content');

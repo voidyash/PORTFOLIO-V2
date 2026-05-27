@@ -83,10 +83,6 @@ body {
   pointer-events: none;
   z-index: 9998;
   transform: translate(-50%, -50%);
-  transition:
-    transform 0.12s ease,
-    left 0.12s ease,
-    top 0.12s ease;
 }
 
 body:has(a:hover) #cursor,
@@ -712,6 +708,7 @@ section {
 .about-tools {
   opacity: 0;
   transform: translateY(20px);
+  pointer-events: none;
 }
 
 .about-tools.revealed {
@@ -799,7 +796,7 @@ section {
   border-radius: 10px;
   padding: 1.25rem 1rem;
   text-align: center;
-  cursor: default;
+  /* cursor: default; */
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -838,7 +835,17 @@ section {
   font-size: 0.72rem;
   color: var(--white);
   letter-spacing: 0.08em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-level{
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: rgba(120, 220, 255, 0.95);
+  text-shadow:  0 0 5px rgba(120, 220, 255, 0.8),
+                0 0 10px rgba(120, 220, 255, 0.6),
+                0 0 20px rgba(120, 220, 255, 0.4);
+  margin-bottom: 0.5rem;
 }
 
 .skill-bar-wrap {
