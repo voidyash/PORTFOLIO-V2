@@ -1,12 +1,12 @@
 "use strict";
 
 const TITLES = [
-    "PROGRAMMER",
-    "AI BUILDER",
-    "GAME DEVELOPER",
-    "BROADCAST DIRECTOR",
-    "CREATIVE TECHNOLOGIST",
-    "SYSTEMS THINKER",
+    "A PROGRAMMER",
+    "AN AI BUILDER",
+    "A GAME DEVELOPER",
+    "A BROADCAST DIRECTOR",
+    "A CREATIVE TECHNOLOGIST",
+    "A SYSTEMS THINKER",
 ];
 
 const SKILLS = [{
@@ -352,7 +352,7 @@ const TIMELINE = [{
     ];
     let current = 0;
     const interval = setInterval(() => {
-        current += Math.random() * 22 + 8;
+        current += Math.random() * 3 + 1;
         if (current > 100) current = 100;
         bar.style.width = current + "%";
         pct.textContent = Math.floor(current) + "%";
@@ -365,7 +365,7 @@ const TIMELINE = [{
                 initCounters();
             }, 500);
         }
-    }, 80);
+    }, 120);
 })();
 
 (function initCursor() {
@@ -403,7 +403,7 @@ const TIMELINE = [{
     const temp = document.getElementById("hudTemp");
     const ping = document.getElementById("hudPing");
     setInterval(() => {
-        temp.textContent = (35 + Math.random() * 3).toFixed(1) + "°C";
+        temp.textContent = (40 + Math.random() * 6).toFixed(1) + "°C";
         ping.textContent = Math.floor(2 + Math.random() * 8) + "ms";
     }, 1800);
 })();

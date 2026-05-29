@@ -1,6 +1,6 @@
 #  VOIDAI Portfolio
 
-A futuristic cyberpunk-inspired developer portfolio built with pure HTML, CSS, and JavaScript.
+A futuristic tron-inspired developer portfolio built with pure HTML, CSS, and JavaScript.
 
 This project is not a generic template portfolio.
 
@@ -14,7 +14,7 @@ It was designed as an immersive interactive interface — combining:
 - dynamic project rendering
 - terminal-style interaction
 
-The goal was to make the portfolio feel less like a webpage and more like an operating system interface from a sci-fi universe.
+The goal was to make the portfolio feel less like a webpage and more like an operating system interface from tron universe.
 
 ---
 
