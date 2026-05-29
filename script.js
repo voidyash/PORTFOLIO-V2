@@ -352,7 +352,7 @@ const TIMELINE = [{
     ];
     let current = 0;
     const interval = setInterval(() => {
-        current += Math.random() * 22 + 8;
+        current += Math.random() * 3 + 1;
         if (current > 100) current = 100;
         bar.style.width = current + "%";
         pct.textContent = Math.floor(current) + "%";
@@ -365,7 +365,7 @@ const TIMELINE = [{
                 initCounters();
             }, 500);
         }
-    }, 80);
+    }, 120);
 })();
 
 (function initCursor() {
