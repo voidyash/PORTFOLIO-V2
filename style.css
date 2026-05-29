@@ -2134,6 +2134,14 @@ section {
 }
 
 @media (max-width: 768px) {
+  #cursor, #cursor-trail{
+    display: none;
+  }
+
+  body{
+    cursor: auto;
+  }
+
   .nav-hamburger{
     display: block;
   }
