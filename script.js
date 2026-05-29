@@ -403,7 +403,7 @@ const TIMELINE = [{
     const temp = document.getElementById("hudTemp");
     const ping = document.getElementById("hudPing");
     setInterval(() => {
-        temp.textContent = (35 + Math.random() * 3).toFixed(1) + "°C";
+        temp.textContent = (40 + Math.random() * 6).toFixed(1) + "°C";
         ping.textContent = Math.floor(2 + Math.random() * 8) + "ms";
     }, 1800);
 })();
