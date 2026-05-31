@@ -730,7 +730,7 @@ function initCounters() {
         <div class="tl-node"></div>
   
         <div class="tl-connector">
-          <svg viewBox="0 0 80 80 preserveAspectRatio = "none">
+          <svg viewBox="0 0 80 80" preserveAspectRatio = "none">
             <path d="M0 40 H50 Q70 40 70 20 V0"></path>
           </svg>
         </div>
